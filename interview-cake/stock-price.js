@@ -8,8 +8,8 @@ var profit = [];
 var getMaxProfit = function( arr ) {
 	// Set the first number in the array to the min just to get started:
 	var min = arr[0];
-	// Declare profit variable in this scope:
-	var profit;
+	// Declare aProfit variable in this scope:
+	var aProfit;
 	for ( var i = 0; i < arr.length; i++) {
 		// If current i is less than the min, make it the new min:
 		if ( arr[i] < min ) {
