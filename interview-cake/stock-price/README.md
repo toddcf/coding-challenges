@@ -6,3 +6,4 @@ Differences in the alternate solution:
 - Allows negative numbers to be used in the profit calculations, since a negative will never be the max, anyway.
 (Or at least it shouldn't be -- but what if your stock only went down that day? This is one area where I like my solution better, although I
 could still adjust mine to throw some sort of error if the stock only went down all day.)
+- https://www.interviewcake.com/question/javascript/stock-price
