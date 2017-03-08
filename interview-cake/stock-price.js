@@ -33,7 +33,7 @@ var getMaxProfit = function( arr ) {
 	return maxProfit;
 };
 
-getMaxProfit(stockPricesYesterday);
+// getMaxProfit(stockPricesYesterday);
 // returns $6 (buying for $5 and selling for $11).
-// getMaxProfit(upAndDown);
+getMaxProfit(upAndDown);
 // Should return $18 (buying for $12 and selling for $30).
