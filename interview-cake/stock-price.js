@@ -10,6 +10,7 @@ var getMaxProfit = function( arr ) {
 	var min = arr[0];
 	// Declare aProfit variable in this scope:
 	var aProfit;
+	// Skip the first number in the array in the for loop, as it has already been set to min:
 	for ( var i = 1; i < arr.length; i++) {
 		// If current i is less than the min, make it the new min:
 		if ( arr[i] < min ) {
@@ -26,8 +27,8 @@ var getMaxProfit = function( arr ) {
 	console.log(profit);
 	// Use Math.max to locate the max profit from the profit array:
 	var maxProfit = Math.max(profit);
-	return maxProfit;
 	console.log("Max Profit: $" + maxProfit);
+	return maxProfit;
 };
 
 getMaxProfit(stockPricesYesterday);
