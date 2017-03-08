@@ -17,9 +17,9 @@ var getMaxProfit = function( arr ) {
 		}
 		// If next number is higher than the current min, subtract the current min from that number:
 		else {
-			profit = i - min;
+			aProfit = i - min;
 			// Push profit to a the profit array:
-
+			profit.push(aProfit);
 		}
 	};
 	// Use Math.max to locate the max profit from the profit array:
