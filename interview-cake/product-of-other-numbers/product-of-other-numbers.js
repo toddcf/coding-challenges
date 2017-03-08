@@ -8,13 +8,15 @@ var getProductsOfAllIntsExceptAtIndex = function( arr ) {
 	var products = [];
 	// For loop
 	for ( i = 0; i < numbers.length; i++ ) {
-		// In the first iteration, multiply the numbers EXCEPT FOR 1:
+		// In the first iteration, multiply the numbers EXCEPT FOR 1. Do not use division.
 		// Possibly use array.reduce?
 		// Push to new array.
 		products.push(  );
+		// Return a new array for each iteration of the for loop:
+		console.log(products);
+		return products;
 	}
-	return ;
-}
+};
 
 // Call function:
 getProductsOfAllIntsExceptAtIndex( numbers );
