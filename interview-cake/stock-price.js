@@ -26,7 +26,9 @@ var getMaxProfit = function( arr ) {
 	};
 	console.log(profit);
 	// Use Math.max to locate the max profit from the profit array:
-	var maxProfit = Math.max(profit);
+	var maxProfit = profit.reduce(function(a, b) {
+		return Math.max(a, b);
+	});
 	console.log("Max Profit: $" + maxProfit);
 	return maxProfit;
 };
