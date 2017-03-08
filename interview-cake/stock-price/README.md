@@ -1,5 +1,5 @@
 #Stock Price Coding Challenge
-Differences in this alternate solution:
+Differences in the alternate solution:
 - Throws an error if the stock prices array is less than two items.
 - Doesn't pass the profits into their own array; runs Math.max and stores it in a variable EVERY SINGLE ITERATION of the for loop.
 - Uses the same technique for the minimum prices.  (Math.min.)
