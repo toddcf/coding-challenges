@@ -2,12 +2,12 @@
 
 var stockPricesYesterday = [10, 7, 5, 8, 11, 9];
 var upAndDown = [12, 24, 30, 20, 10, 20, 21];
-// Empty array. Any profits will be pushed here during the for loop:
-var profit = [];
 
 var getMaxProfit = function( arr ) {
 	// Set the first number in the array to the min just to get started:
 	var min = arr[0];
+	// Empty array. Any profits will be pushed here during the for loop:
+	var profit = [];
 	// Declare aProfit variable in this scope:
 	var aProfit;
 	// Skip the first number in the array in the for loop, as it has already been set to min:
@@ -33,7 +33,7 @@ var getMaxProfit = function( arr ) {
 	return maxProfit;
 };
 
-// getMaxProfit(stockPricesYesterday);
+getMaxProfit(stockPricesYesterday);
 // returns $6 (buying for $5 and selling for $11).
 getMaxProfit(upAndDown);
 // Should return $18 (buying for $12 and selling for $30).
