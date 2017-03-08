@@ -10,18 +10,20 @@ var getMaxProfit = function( arr ) {
 	var min = arr[0];
 	// Declare aProfit variable in this scope:
 	var aProfit;
-	for ( var i = 0; i < arr.length; i++) {
+	for ( var i = 1; i < arr.length; i++) {
 		// If current i is less than the min, make it the new min:
 		if ( arr[i] < min ) {
 			min = arr[i];
 		}
 		// If next number is higher than the current min, subtract the current min from that number:
-		else {
-			aProfit = i - min;
-			// Push profit to a the profit array:
+		else if ( arr[i] > min) {
+			aProfit = ( arr[i] - min );
+			// console.log(aProfit);
+			// Push aProfit to a the profit array:
 			profit.push(aProfit);
 		}
 	};
+	console.log(profit);
 	// Use Math.max to locate the max profit from the profit array:
 	var maxProfit = Math.max(profit);
 	return maxProfit;
@@ -30,5 +32,5 @@ var getMaxProfit = function( arr ) {
 
 getMaxProfit(stockPricesYesterday);
 // returns $6 (buying for $5 and selling for $11).
-getMaxProfit(upAndDown);
+// getMaxProfit(upAndDown);
 // Should return $18 (buying for $12 and selling for $30).
