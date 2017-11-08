@@ -1,0 +1,3 @@
+# Hint
+
+Use a loop.

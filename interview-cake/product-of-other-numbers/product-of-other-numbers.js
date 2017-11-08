@@ -10,6 +10,7 @@ var getProductsOfAllIntsExceptAtIndex = function( arr ) {
 	for ( i = 0; i < numbers.length; i++ ) {
 		// In the first iteration, multiply the numbers EXCEPT FOR 1. Do not use division.
 		// Possibly use array.reduce?
+		// Examine http://www.w3resource.com/javascript-exercises/javascript-array-exercise-12.php
 		// Push to new array.
 		products.push(  );
 		// Return a new array for each iteration of the for loop:
