@@ -11,3 +11,17 @@ All we are doing is iterating through the `numbers` array and checking for numbe
 `3`
 `6`
 `9`
+
+## Extra Credit
+
+The same code, rewritten as a for loop:
+
+```
+var numbers = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+
+for (var i = 1; i < numbers.length; i++ ) {
+	if ( i % 3 === 0 ) {
+		console.log( i );
+	}
+}
+```
