@@ -1,21 +1,5 @@
 <!-- Write a function that takes an array as an argument and returns true if all elements in the array are identical. -->
 <script type="text/javascript">
-
-	function isUniform( arr ) {
-
-		var firstItem = arr[ 0 ];
-		var uniform = true;
-
-		arr.forEach( function( item ) {
-			if ( item !== firstItem ) {
-				uniform = false;
-				return;
-			}
-		});
-
-		console.log( uniform );
-
-	}
 	
 	isUniform( [ 1, 1, 1, 1 ] ); /* True */
 	isUniform( [ 2, 1, 1, 1 ] ); /* False */

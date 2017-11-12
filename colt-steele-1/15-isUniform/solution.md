@@ -11,6 +11,7 @@ function isUniform( arr ) {
 	for ( var i = 1; i < arr.length; i++ ) {
 		if ( arr[ i ] !== firstItem ) {
 			uniform = false;
+			return;
 		}
 		else {
 			uniform = true;
