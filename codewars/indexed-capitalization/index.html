@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		
+		<p>Given a string and an array of integers representing indices, capitalize all letters at the given indices.</p>
+
+		<p>For example:</p>
+
+		<ul>
+			<li>capitalize("abcdef",[1,2,5]); = "aBCdeF"</li>
+			<li>capitalize("abcdef",[1,2,5,100]); = "aBCdeF". There is no index 100.</li>
+			<li>The input will be a lowercase string with no spaces and an array of digits.</li>
+		</ul>
+
+		Good luck!
+		
+		<script type="text/javascript">
+			
+			function capitalize( s, arr ) {
+				
+				var letters = s.split( "" );
+				console.log( letters );
+
+				var current;
+				var cap;
+
+				for ( var i = 0; i < arr.length; i++ ) {
+					if ( arr[ i ] <= letters.length ) {
+						cap = letters[ arr[ i ] ].toUpperCase();
+						letters.splice( arr[ i ], 1, cap );
+					}
+				}
+				result = letters.join( "" );
+				console.log( result );
+				return result;
+			
+			};
+
+			capitalize("abcdef",[1,2,5,100]);
+
+		</script>
+	
+	</body>
+
+</html>
