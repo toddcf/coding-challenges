@@ -48,27 +48,66 @@
 
 				/*dirReduc( ['EAST', 'WEST', 'NORTH', 'SOUTH', 'NORTH', 'NORTH', 'NORTH', 'WEST', 'EAST', 'SOUTH', 'NORTH'] );*/ /* NORTH, NORTH, NORTH */
 
+				console.log( "Index = 0 before: " + arr );
+
+				for ( var i = 0; i < arr.length; i++ ) {
+
+					
+
+					if ( ( arr[ i ] === "NORTH" ) && ( ( arr[ i + 1 ] ) === "SOUTH" ) ) {
+						delete arr[ i ];
+						delete arr[ i + 1 ];
+					}
+					else if ( ( arr[ i ] === "SOUTH" ) && ( ( arr[ i + 1 ] ) === "NORTH" ) ) {
+						delete arr[ i ];
+						delete arr[ i + 1 ];
+					}
+					else if ( ( arr[ i ] === "EAST" ) && ( ( arr[ i + 1 ] ) === "WEST" ) ) {
+						delete arr[ i ];
+						delete arr[ i + 1 ];
+					}
+					else if ( ( arr[ i ] === "WEST" ) && ( ( arr[ i + 1 ] ) === "EAST" ) ) {
+						delete arr[ i ];
+						delete arr[ i + 1 ];
+					}
+
+					console.log( "Index = " + i + " after: " + arr );
+
+				}
+
+				console.log( arr );
+
+				arr = arr.filter(function(n){ return n != undefined });
+
+				console.log( arr );
+
 				// MAP() VERSION:
-				var reduced1 = arr.map( function callback( currentValue, index, array ) {
+				// var reduced1 = arr.map( function callback( currentValue, index, array ) {
 
-					console.log( "Index = " + index + " before: " + arr );
+				// 	console.log( "Index = " + index + " before: " + arr );
 
-					if ( ( currentValue === "NORTH" ) && ( ( arr[ index + 1 ] ) === "SOUTH" ) /*&& ( ( arr[ index - 1 ] ) !== "SOUTH" )*/ ) {
-						arr.splice( index, 2 );
-					}
-					else if ( ( currentValue === "SOUTH" ) && ( ( arr[ index + 1 ] ) === "NORTH" ) /*&& ( ( arr[ index - 1 ] ) !== "NORTH" )*/ ) {
-						arr.splice( index, 2 );
-					}
-					else if ( ( currentValue === "EAST" ) && ( ( arr[ index + 1 ] ) === "WEST" ) /*&& ( ( arr[ index - 1 ] ) !== "WEST" )*/ ) {
-						arr.splice( index, 2 );
-					}
-					else if ( ( currentValue === "WEST" ) && ( ( arr[ index + 1 ] ) === "EAST" ) /*&& ( ( arr[ index - 1 ] ) !== "EAST" )*/ ) {
-						arr.splice( index, 2 );
-					}
+				// 	if ( ( currentValue === "NORTH" ) && ( ( arr[ index + 1 ] ) === "SOUTH" ) ) {
+				// 		arr.splice( index, 2 );
+				// 		console.log( "Index = " + index + " after: " + arr );
+				// 		index--;
+				// 	}
+				// 	else if ( ( currentValue === "SOUTH" ) && ( ( arr[ index + 1 ] ) === "NORTH" ) ) {
+				// 		arr.splice( index, 2 );
+				// 		console.log( "Index = " + index + " after: " + arr );
+				// 		index--;
+				// 	}
+				// 	else if ( ( currentValue === "EAST" ) && ( ( arr[ index + 1 ] ) === "WEST" ) ) {
+				// 		arr.splice( index, 2 );
+				// 		console.log( "Index = " + index + " after: " + arr );
+				// 		index--;
+				// 	}
+				// 	else if ( ( currentValue === "WEST" ) && ( ( arr[ index + 1 ] ) === "EAST" ) ) {
+				// 		arr.splice( index, 2 );
+				// 		console.log( "Index = " + index + " after: " + arr );
+				// 		index--;
+				// 	}
 
-					console.log( "Index = " + index + " after: " + arr );
-
-				});
+				// });
 
 				
 
@@ -117,8 +156,8 @@
 			/*dirReduc( [ "NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST" ] );*/ /*["WEST"]*/
 			/*dirReduc( [ "NORTH", "WEST", "SOUTH", "EAST" ] );*/ /*["NORTH", "WEST", "SOUTH", "EAST"]*/
 			/*dirReduc( [ "NORTH", "SOUTH", "EAST", "WEST", "EAST", "WEST" ] );*/ /*[]*/
-			dirReduc( ['EAST', 'WEST', 'NORTH', 'SOUTH', 'NORTH', 'NORTH', 'NORTH', 'WEST', 'EAST', 'SOUTH', 'NORTH'] ); /* NORTH, NORTH, NORTH */
-			/*dirReduc( ['NORTH', 'SOUTH', 'WEST', 'EAST', 'NORTH', 'SOUTH', 'SOUTH', 'WEST', 'EAST', 'WEST', 'SOUTH', 'NORTH', 'EAST', 'WEST'] );*/ /* NORTH, WEST */
+			/*dirReduc( ['EAST', 'WEST', 'NORTH', 'SOUTH', 'NORTH', 'NORTH', 'NORTH', 'WEST', 'EAST', 'SOUTH', 'NORTH'] );*/ /* NORTH, NORTH, NORTH */
+			dirReduc( ['NORTH', 'SOUTH', 'WEST', 'EAST', 'NORTH', 'SOUTH', 'SOUTH', 'WEST', 'EAST', 'WEST', 'SOUTH', 'NORTH', 'EAST', 'WEST'] ); /* NORTH, WEST */
 
 		</script>
 	
