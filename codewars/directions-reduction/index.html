@@ -45,138 +45,14 @@
 		<script type="text/javascript">
 			
 			function dirReduc(arr) {
-
-				for ( var i = 0; i < arr.length; i++ ) {					
-
-					if ( ( arr[ i ] === "NORTH" ) && ( ( arr[ i + 1 ] ) === "SOUTH" ) ) {
-						delete arr[ i ];
-						delete arr[ i + 1 ];
-					}
-					else if ( ( arr[ i ] === "SOUTH" ) && ( ( arr[ i + 1 ] ) === "NORTH" ) ) {
-						delete arr[ i ];
-						delete arr[ i + 1 ];
-					}
-					else if ( ( arr[ i ] === "EAST" ) && ( ( arr[ i + 1 ] ) === "WEST" ) ) {
-						delete arr[ i ];
-						delete arr[ i + 1 ];
-					}
-					else if ( ( arr[ i ] === "WEST" ) && ( ( arr[ i + 1 ] ) === "EAST" ) ) {
-						delete arr[ i ];
-						delete arr[ i + 1 ];
-					}
-
-					console.log( "Index = " + i + " after: " + arr );
-
-				}
-
-				arr = arr.filter( function( n ) {
-					return n != undefined;
-				} );
-
-				for ( var i = 0; i < arr.length; i++ ) {
-
-					if ( ( arr[ i ] === "NORTH" ) && ( ( arr[ i + 1 ] ) === "SOUTH" ) ) {
-						delete arr[ i ];
-						delete arr[ i + 1 ];
-					}
-					else if ( ( arr[ i ] === "SOUTH" ) && ( ( arr[ i + 1 ] ) === "NORTH" ) ) {
-						delete arr[ i ];
-						delete arr[ i + 1 ];
-					}
-					else if ( ( arr[ i ] === "EAST" ) && ( ( arr[ i + 1 ] ) === "WEST" ) ) {
-						delete arr[ i ];
-						delete arr[ i + 1 ];
-					}
-					else if ( ( arr[ i ] === "WEST" ) && ( ( arr[ i + 1 ] ) === "EAST" ) ) {
-						delete arr[ i ];
-						delete arr[ i + 1 ];
-					}
-
-				}
-
-				arr = arr.filter( function( n ) {
-					return n != undefined;
-				} );
-
-				return ( arr );
-
-				// MAP() VERSION:
-				// var reduced1 = arr.map( function callback( currentValue, index, array ) {
-
-				// 	console.log( "Index = " + index + " before: " + arr );
-
-				// 	if ( ( currentValue === "NORTH" ) && ( ( arr[ index + 1 ] ) === "SOUTH" ) ) {
-				// 		arr.splice( index, 2 );
-				// 		console.log( "Index = " + index + " after: " + arr );
-				// 		index--;
-				// 	}
-				// 	else if ( ( currentValue === "SOUTH" ) && ( ( arr[ index + 1 ] ) === "NORTH" ) ) {
-				// 		arr.splice( index, 2 );
-				// 		console.log( "Index = " + index + " after: " + arr );
-				// 		index--;
-				// 	}
-				// 	else if ( ( currentValue === "EAST" ) && ( ( arr[ index + 1 ] ) === "WEST" ) ) {
-				// 		arr.splice( index, 2 );
-				// 		console.log( "Index = " + index + " after: " + arr );
-				// 		index--;
-				// 	}
-				// 	else if ( ( currentValue === "WEST" ) && ( ( arr[ index + 1 ] ) === "EAST" ) ) {
-				// 		arr.splice( index, 2 );
-				// 		console.log( "Index = " + index + " after: " + arr );
-				// 		index--;
-				// 	}
-
-				// });
-
-				
-
-				// FOR LOOP VERSION:
-				// var reduced1 = [];
-				// var reduced2 = [];
-
-				// for ( var i = 0; i < arr.length; i++ ) {
-
-				// 	if ( ( arr[ i ] === "NORTH" ) && ( arr[ i + 1 ] !== "SOUTH" ) && ( arr[ i - 1 ] !== "SOUTH" ) ) {
-				// 		reduced1.push( arr[ i ] );
-				// 	}
-				// 	else if ( ( arr[ i ] === "SOUTH" ) && ( arr[ i + 1 ] !== "NORTH" ) && ( arr[ i - 1 ] !== "NORTH" ) ) {
-				// 		reduced1.push( arr[ i ] );
-				// 	}
-				// 	else if ( ( arr[ i ] === "EAST" ) && ( arr[ i + 1 ] !== "WEST" ) && ( arr[ i - 1 ] !== "WEST" ) ) {
-				// 		reduced1.push( arr[ i ] );
-				// 	}
-				// 	else if ( ( arr[ i ] === "WEST" ) && ( arr[ i + 1 ] !== "EAST" ) && ( arr[ i - 1 ] !== "EAST" ) ) {
-				// 		reduced1.push( arr[ i ] );
-				// 	}
-
-				// }
-
-				// for ( var i = 0; i < reduced1.length; i++ ) {
-				// 	if ( ( reduced1[ i ] === "NORTH" ) && ( reduced1[ i + 1 ] !== "SOUTH" ) && ( reduced1[ i - 1 ] !== "SOUTH" ) ) {
-				// 		reduced2.push( reduced1[ i ] );
-				// 	}
-				// 	else if ( ( reduced1[ i ] === "SOUTH" ) && ( reduced1[ i + 1 ] !== "NORTH" ) && ( reduced1[ i - 1 ] !== "NORTH" ) ) {
-				// 		reduced2.push( reduced1[ i ] );
-				// 	}
-				// 	else if ( ( reduced1[ i ] === "EAST" ) && ( reduced1[ i + 1 ] !== "WEST" ) && ( reduced1[ i - 1 ] !== "WEST" ) ) {
-				// 		reduced2.push( reduced1[ i ] );
-				// 	}
-				// 	else if ( ( reduced1[ i ] === "WEST" ) && ( reduced1[ i + 1 ] !== "EAST" ) && ( reduced1[ i - 1 ] !== "EAST" ) ) {
-				// 		reduced2.push( reduced1[ i ] );
-				// 	}
-				// }
-
-				// console.log( reduced2 );
-
-				// return reduced2;
-
+				// Your code here . . .
 			}
 
-			/*dirReduc( [ "NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST" ] );*/ /*["WEST"]*/
-			/*dirReduc( [ "NORTH", "WEST", "SOUTH", "EAST" ] );*/ /*["NORTH", "WEST", "SOUTH", "EAST"]*/
-			/*dirReduc( [ "NORTH", "SOUTH", "EAST", "WEST", "EAST", "WEST" ] );*/ /*[]*/
-			/*dirReduc( ['EAST', 'WEST', 'NORTH', 'SOUTH', 'NORTH', 'NORTH', 'NORTH', 'WEST', 'EAST', 'SOUTH', 'NORTH'] );*/ /* NORTH, NORTH, NORTH */
-			/*dirReduc( ['NORTH', 'SOUTH', 'WEST', 'EAST', 'NORTH', 'SOUTH', 'SOUTH', 'WEST', 'EAST', 'WEST', 'SOUTH', 'NORTH', 'EAST', 'WEST'] );*/ /* NORTH, WEST */
+			dirReduc( [ "NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST" ] ); /*["WEST"]*/
+			dirReduc( [ "NORTH", "WEST", "SOUTH", "EAST" ] ); /*["NORTH", "WEST", "SOUTH", "EAST"]*/
+			dirReduc( [ "NORTH", "SOUTH", "EAST", "WEST", "EAST", "WEST" ] ); /*[]*/
+			dirReduc( ['EAST', 'WEST', 'NORTH', 'SOUTH', 'NORTH', 'NORTH', 'NORTH', 'WEST', 'EAST', 'SOUTH', 'NORTH'] ); /* NORTH, NORTH, NORTH */
+			dirReduc( ['NORTH', 'SOUTH', 'WEST', 'EAST', 'NORTH', 'SOUTH', 'SOUTH', 'WEST', 'EAST', 'WEST', 'SOUTH', 'NORTH', 'EAST', 'WEST'] ); /* NORTH, WEST */
 
 		</script>
 	
