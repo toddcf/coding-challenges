@@ -43,12 +43,69 @@
 		<script type="text/javascript">
 			
 			function dirReduc(arr){
-				// ...
+
+				var north = 0;
+				var south = 0;
+				var east = 0;
+				var west = 0;
+				var reduced = [];
+
+				
+				// USE FOREACH INSTEAD??
+				for ( var i = 0; i < arr.length; i++ ) {
+
+					// CHANGE TO SWITCH STATEMENT
+					if ( arr[ i ] === "NORTH" ) {
+						north++;
+					}
+					else if ( arr[ i ] === "SOUTH" ) {
+						south++;
+					}
+					else if ( arr[ i ] === "EAST" ) {
+						east++;
+					}
+					else if ( arr[ i ] === "WEST" ) {
+						west++;
+					}
+				}
+
+				console.log( "North: " + north );
+				console.log( "South: " + south );
+				console.log( "East: " + east );
+				console.log( "West: " + west );
+
+				if ( north >= south ) {
+					north = north - south;
+					south = 0;
+				}
+				else {
+					south = south - north;
+					north = 0;
+				}
+
+				if ( east >= west ) {
+					east = east - west;
+					west = 0;
+				}
+				else {
+					west = west - east;
+					east = 0;
+				}
+
+				console.log( "North reduced: " + north );
+				console.log( "South reduced: " + south );
+				console.log( "East reduced: " + east );
+				console.log( "West reduced: " + west );
+
+				if ( north > 0 ) {
+					// Push "NORTH" to reduced array "north" times.
+				}
+
 			}
 
 			dirReduc( [ "NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST" ] ); /*["WEST"]*/
-			dirReduc( [ "NORTH", "WEST", "SOUTH", "EAST" ] ); /*["NORTH", "WEST", "SOUTH", "EAST"]*/
-			dirReduc( [ "NORTH", "SOUTH", "EAST", "WEST", "EAST", "WEST" ] ); /*[]*/
+			/*dirReduc( [ "NORTH", "WEST", "SOUTH", "EAST" ] );*/ /*["NORTH", "WEST", "SOUTH", "EAST"]*/
+			/*dirReduc( [ "NORTH", "SOUTH", "EAST", "WEST", "EAST", "WEST" ] );*/ /*[]*/
 
 		</script>
 	
